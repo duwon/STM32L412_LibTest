@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+MDK-ARM/DebugConfig/
+MDK-ARM/RTE/RTE_Components.h
+MDK-ARM/STM32L412KB.uvguix.duwon
