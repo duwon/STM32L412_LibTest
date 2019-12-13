@@ -39,6 +39,16 @@ extern RTC_HandleTypeDef hrtc;
 void MX_RTC_Init(void);
 
 /* USER CODE BEGIN Prototypes */
+uint32_t HW_RTC_SetTimerContext( void );
+uint32_t HW_RTC_GetTimerElapsedTime( void );
+uint32_t HW_RTC_GetTimerContext( void );
+void HW_RTC_StopAlarm( void );
+uint32_t HW_RTC_ms2Tick( uint32_t timeMicroSec );
+uint32_t HW_RTC_GetTimerValue( void );
+uint32_t HW_RTC_Tick2ms( uint32_t tick );
+void HW_RTC_StartWakeUpAlarm( uint32_t timeout );
+void HW_RTC_AlarmConfig(void);
+void HW_RTC_DelayMs( uint32_t delay );
 
 /* USER CODE END Prototypes */
 

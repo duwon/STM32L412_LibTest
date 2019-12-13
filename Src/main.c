@@ -93,6 +93,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
+  user_start();
 
   /* USER CODE END 2 */
 
