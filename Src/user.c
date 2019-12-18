@@ -18,6 +18,9 @@ PUTCHAR_PROTOTYPE
   return ch;
 }
 
+
+uint8_t rxData[1];
+
 static TimerEvent_t LedTimer;
 static void OnLedTimerEvent(void);
 
@@ -45,9 +48,19 @@ static void printUartLogo(void)
   printf("\r\n\r\n");
 }
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if(huart->Instance == USART2)
+  {
+    printf("%c",rxData[0]);
+    HAL_UART_Receive_DMA(huart, rxData, 1);
+  }
+}
+
 void user_start(void)
 {
   printUartLogo();
+  HAL_UART_Receive_DMA(&huart2, rxData, 1);
   HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);
 	
 	timer_start();
