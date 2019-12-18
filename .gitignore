@@ -54,3 +54,5 @@ MDK-ARM/DebugConfig/
 MDK-ARM/RTE/RTE_Components.h
 MDK-ARM/STM32L412KB.uvguix.duwon
 MDK-ARM/STM32L412KB/
+EWARM/STM32L412KB/
+MDK-ARM/Build_output.txt
